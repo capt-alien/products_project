@@ -1,1 +1,13 @@
-<p>edit works!</p>
+<p>Update Product</p>
+
+<button [routerLink]="['/']">Go Back</button>
+
+{{ errors | json}}
+<br>
+
+<form (submit)="buttonSubmit(product._id)">
+        Name: <input type="text" name="name" [(ngModel)]="product.name"><br>
+        Quantity: <input type="number" name="quantity" [(ngModel)]="product.quantity"><br>
+        Price: <input type="number" name="price" [(ngModel)]="product.price"><br>
+        <input type="submit" value="Save">
+</form>

@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { HttpService } from './../http.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product',
