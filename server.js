@@ -12,14 +12,14 @@ app.use(parser.urlencoded({ extended: true }));
 app.use(express.static( __dirname + '/public/dist/public' ));
 
 
-// require('./server/config/database.js');
-// require('./server/config/routes.js')(app);
+require('./server/config/database.js');
+require('./server/config/routes.js')(app);
 
 
-app.get('/', (request, response) => {
-    response.send("Hello Express");
- });
- a
+// app.get('/', (request, response) => {
+//     response.send("Hello Express");
+//  });
+ 
 
 
 // App.listen

@@ -3,7 +3,7 @@ let path = require('path');
 let mongoose = require('mongoose');
 
 // connect to Mongodb
-mongoose.connect('mongodb://localhost/authorsAPI',
+mongoose.connect('mongodb://localhost/products',
                 {useNewUrlParser: true, useUnifiedTopology: true})
 
 // Create variable that points to models folder
