@@ -20,9 +20,7 @@ export class NewComponent implements OnInit {
 
   ngOnInit() {
   }
-
   createProduct(){
-    console.log("new Button Clicked") 
     const observable = this.http.postProduct(this.newProduct);
     observable.subscribe((data:any)=>{
       console.log(data);

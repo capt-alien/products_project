@@ -10,10 +10,10 @@ export class HttpService {
   constructor(private http: HttpClient) { 
     this.getAllProducts()
   }
-    // INDEX
-    getAllProducts(){
-      return this.http.get('/products')
-    }
+  // INDEX
+  getAllProducts(){
+    return this.http.get('/products')
+  }
   // GET ONE
   getOneProduct(id){
     return this.http.get(`/products/${id}`)
@@ -22,13 +22,14 @@ export class HttpService {
   postProduct(data){
     return this.http.post('/products', data)
   }
-  // EDIT
-  updateProduct(id, data){
-    return this.http.put(`/products/${id}`, data)
-  }
   // DELETE
   deleteProduct(id){
     return this.http.delete(`/products/${id}`)
   }
+  // EDIT
+  updateProduct(id, data){
+    return this.http.put(`/products/${id}`, data)
+  }
+
   // END ROUTES
 }

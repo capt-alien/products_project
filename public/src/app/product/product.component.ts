@@ -32,7 +32,7 @@ export class ProductComponent implements OnInit {
       this.product = data;
     })
   }
-  deleteProduct(id:any){
+  deleteOneProduct(id:any){
     const observable = this.http.deleteProduct(id)
     observable.subscribe((data:any)=>{
       console.log("Deleted: "+data)

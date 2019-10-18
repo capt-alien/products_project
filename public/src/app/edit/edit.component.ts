@@ -13,7 +13,7 @@ export class EditComponent implements OnInit {
     quantity: '',
     price: ''
   }
-  errors: any;
+  errors;
 
   constructor(private route: ActivatedRoute,
               private http: HttpService,
