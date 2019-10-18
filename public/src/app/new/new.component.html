@@ -1,1 +1,13 @@
-<p>new works!</p>
+<p>New Product</p>
+
+<button [routerLink]="['/']">Go Back</button>
+
+{{ errors | json}}
+
+<form (submit)="createProduct()">
+        Name: <input type="text" name="name" [(ngModel)]="newProduct.name"><br>
+        Quantity: <input type="number" name="name" [(ngModel)]="newProduct.quantity"><br>
+        Price: <input type="number" name="price" [(ngModel)]="newProduct.price"><br>
+    <input type="submit" value="Create!">
+</form>
+
