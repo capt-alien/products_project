@@ -1,1 +1,11 @@
-<p>product works!</p>
+<p>Product Details</p>
+<br>
+<button [routerLink]="['/']">Go Back</button>
+
+
+<p>Name: {{ product.name }}</p>
+<p>Quantity: {{ product.quantity }}</p>
+<p>Price: {{ product.price }}</p>
+
+<!-- DELETE GOES HERE-->
+<button (click)="deleteProduct(product._id)">Delete</button>

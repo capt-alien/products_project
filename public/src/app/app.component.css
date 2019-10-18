@@ -1,0 +1,14 @@
+#header{
+    width: auto;
+    height: auto;
+    /* border-style: double; */
+    /* border-color:black; */
+    padding:20px;
+}
+#window{
+    width: auto;
+    height: auto;
+    border-style: double;
+    border-color:black;
+    padding:20px;
+}

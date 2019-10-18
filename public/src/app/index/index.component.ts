@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from './../http.service';
+
 
 @Component({
   selector: 'app-index',
@@ -6,10 +8,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
+  products: any = [];
 
-  constructor() { }
+  constructor(private http: HttpService) { }
 
   ngOnInit() {
+    this.getProducts();
   }
 
+  getProducts(){
+    const observable = this.http.getAllProducts();
+    observable.subscribe((data:any)=>{
+      this.products = data;
+      console.log(data)
+  })
+
+}
 }

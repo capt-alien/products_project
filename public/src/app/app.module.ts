@@ -9,6 +9,10 @@ import { NewComponent } from './new/new.component';
 import { EditComponent } from './edit/edit.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { HttpService } from './http.service';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,12 +21,15 @@ import { NotFoundComponent } from './not-found/not-found.component';
     NewComponent,
     EditComponent,
     NotFoundComponent
+
   ],
   imports: [
+    FormsModule,
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

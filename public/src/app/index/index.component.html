@@ -1,1 +1,17 @@
-<p>index works!</p>
+<p>Product List</p>
+<button [routerLink]="['/new']">New Product</button>
+
+{{errors | json}}
+
+<!-- CREATE TABLE HERE -->
+<div *ngFor="let product of products" id="product">
+    
+    <p>ID: {{product._id}}</p>
+    <p>Name: {{product.name}}</p>
+    <p>Quantity: {{product.quantity}}</p>
+    <p>Price: {{product.price}}</p>
+
+    <button routerLink="/show/{{product._id}}">Details </button>
+    <button routerLink="/edit/{{product._id}}">Edit </button>
+
+</div>
