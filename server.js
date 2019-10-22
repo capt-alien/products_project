@@ -16,12 +16,6 @@ require('./server/config/database.js');
 require('./server/config/routes.js')(app);
 
 
-// app.get('/', (request, response) => {
-//     response.send("Hello Express");
-//  });
- 
-
-
 // App.listen
 app.listen(PORT, function(){
     console.log("Rippin it up on port: "+PORT)
